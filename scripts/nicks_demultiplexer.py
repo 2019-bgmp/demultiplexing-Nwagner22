@@ -10,6 +10,10 @@
 
 import gzip
 import argparse
+import os
+
+if not os.path.exists('../demultiplexed_output'):
+    os.mkdir('../demultiplexed_output')
 
 
 def get_args():
