@@ -36,7 +36,7 @@ forward_index='/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.g
 reverse_index='/projects/bgmp/shared/2017_sequencing/1294_S1_L008_R3_001.fastq.gz'
 
 
-/usr/bin/time -v python part2_demultiplexing.py -r1 $forward_read -r2 $reverse_read -i1 $forward_index -i2 $reverse_index
+/usr/bin/time -v python nicks_demultiplexer.py -r1 $forward_read -r2 $reverse_read -i1 $forward_index -i2 $reverse_index
 ```
 
 ### Runtime:
