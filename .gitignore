@@ -1,3 +1,4 @@
 .vscode/
 demultiplexed_output/
 ~$rt1_answers.docx
+.gitignore
