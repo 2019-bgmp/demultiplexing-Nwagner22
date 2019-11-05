@@ -38,8 +38,8 @@ REVERSE_COMP_DICT = {"A":"T", "T":"A", "C":"G", "G":"C", "N":"N"} # Key: each of
 
 INDEX_DICT_FW = {} # I would store each index as the key and the value as a filepointer to the respective forward file
 INDEX_DICT_RV = {} # I would store each index as the key and the value as a filepointer to the respective reverse file
-HOPPED_DICT = {'forward':open('demultiplexed_output/hopped_R1.fastq', 'w'), 'reverse':open('demultiplexed_output/hopped_R2.fastq', 'w')} # key: forward or reverse    # filepointer to respective file
-UNDETERMINED_DICT = {'forward':open('demultiplexed_output/undetermined_R1.fastq', 'w'), 'reverse':open('demultiplexed_output/undetermined_R2.fastq', 'w')} # Key: forward or reverse    value: filepointer to respective file
+HOPPED_DICT = {'forward':open('../demultiplexed_output/hopped_R1.fastq', 'w'), 'reverse':open('../demultiplexed_output/hopped_R2.fastq', 'w')} # key: forward or reverse    # filepointer to respective file
+UNDETERMINED_DICT = {'forward':open('../demultiplexed_output/undetermined_R1.fastq', 'w'), 'reverse':open('../demultiplexed_output/undetermined_R2.fastq', 'w')} # Key: forward or reverse    value: filepointer to respective file
 
 # Read in all 24 of the indexes
 with open("indexes.txt", 'r') as indexFile:
@@ -47,8 +47,8 @@ with open("indexes.txt", 'r') as indexFile:
     for line in indexFile:    # loops through all of the indexes in the file indexes.txt
         line = line.strip().split()
         # Here i am creating filepointers for each index, forward and reverse, so that I can store them in their respective dictionaries so I can use them later on when looping
-        current_fw_filepointer = open('demultiplexed_output/R1_' + line[4] + '.fastq', 'w')
-        current_rv_filepointer = open('demultiplexed_output/R2_' + line[4] + '.fastq', 'w')
+        current_fw_filepointer = open('../demultiplexed_output/R1_' + line[4] + '.fastq', 'w')
+        current_rv_filepointer = open('../demultiplexed_output/R2_' + line[4] + '.fastq', 'w')
 
         # Here is where I am storing the keys as each of the 24 indexes
         # and values as the filepointers in their respective dictionaries
