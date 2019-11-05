@@ -1,0 +1,60 @@
+
+Total index hopped records: 707740
+Percentage of index hopped: 0.19 %
+
+Total undetermined records: 30783962
+Percentage of undetermined: 8.47 %
+
+Percentage from index 'GTAGCGTA': 2.235 %
+Percentage from index 'CGATCGAT': 1.543 %
+Percentage from index 'GATCAAGG': 1.813 %
+Percentage from index 'AACAGCGA': 2.442 %
+Percentage from index 'TAGCCATG': 2.926 %
+Percentage from index 'CGGTAATC': 1.394 %
+Percentage from index 'CTCTGGAT': 9.628 %
+Percentage from index 'TACCGGAT': 21.02 %
+Percentage from index 'CTAGCTCA': 4.771 %
+Percentage from index 'CACTTCAC': 1.153 %
+Percentage from index 'GCTACTCT': 2.041 %
+Percentage from index 'ACGATCAG': 2.186 %
+Percentage from index 'TATGGCAC': 3.078 %
+Percentage from index 'TGTTCCGT': 4.331 %
+Percentage from index 'GTCCTAAG': 2.430 %
+Percentage from index 'TCGACAAG': 1.060 %
+Percentage from index 'TCTTCGAC': 11.58 %
+Percentage from index 'ATCATGCG': 2.777 %
+Percentage from index 'ATCGTGGT': 1.896 %
+Percentage from index 'TCGAGAGT': 3.232 %
+Percentage from index 'TCGGATTC': 1.269 %
+Percentage from index 'GATCTTGC': 1.002 %
+Percentage from index 'AGAGTCCA': 3.115 %
+Percentage from index 'AGGATAGC': 2.387 %
+
+Total dual matched records: 331755034
+Total percentage Dual matched: 91.33 %
+
+Overall total percentage: 99.99 %
+
+	Command being timed: "python part2_demultiplexing.py -r1 /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R1_001.fastq.gz -r2 /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R4_001.fastq.gz -i1 /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz -i2 /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R3_001.fastq.gz"
+	User time (seconds): 5784.10
+	System time (seconds): 74.86
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:38:32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 126268
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3003179
+	Voluntary context switches: 100378
+	Involuntary context switches: 4807
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

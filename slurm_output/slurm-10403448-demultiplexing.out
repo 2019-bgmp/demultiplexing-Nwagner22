@@ -1,0 +1,54 @@
+
+Percentage of index hopped: 0.19483726345169416
+Percentage of undetermined: 8.4746699554652
+
+Percentage from index 'GTAGCGTA': 2.235186773983841
+Percentage from index 'CGATCGAT': 1.543018957780807
+Percentage from index 'GATCAAGG': 1.8133955097672234
+Percentage from index 'AACAGCGA': 2.4424263512170965
+Percentage from index 'TAGCCATG': 2.926284518630885
+Percentage from index 'CGGTAATC': 1.3943431552265895
+Percentage from index 'CTCTGGAT': 9.628823478265197
+Percentage from index 'TACCGGAT': 21.02258587121895
+Percentage from index 'CTAGCTCA': 4.771422364549478
+Percentage from index 'CACTTCAC': 1.1538680419140779
+Percentage from index 'GCTACTCT': 2.0417408513204096
+Percentage from index 'ACGATCAG': 2.1866274938806334
+Percentage from index 'TATGGCAC': 3.078982656020342
+Percentage from index 'TGTTCCGT': 4.331217720838653
+Percentage from index 'GTCCTAAG': 2.4309305837781845
+Percentage from index 'TCGACAAG': 1.0608078801842284
+Percentage from index 'TCTTCGAC': 11.58829738252624
+Percentage from index 'ATCATGCG': 2.777038855484719
+Percentage from index 'ATCGTGGT': 1.8961194464800366
+Percentage from index 'TCGAGAGT': 3.2323888520776687
+Percentage from index 'TCGGATTC': 1.2694814689263993
+Percentage from index 'GATCTTGC': 1.002368814127486
+Percentage from index 'AGAGTCCA': 3.1154526327251015
+Percentage from index 'AGGATAGC': 2.387682844863883
+
+Overall total percentage: 99.99999972470502
+
+	Command being timed: "python part2_demultiplexing.py -r1 /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R1_001.fastq.gz -r2 /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R4_001.fastq.gz -i1 /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz -i2 /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R3_001.fastq.gz"
+	User time (seconds): 5620.54
+	System time (seconds): 75.23
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:35:51
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 126320
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2808198
+	Voluntary context switches: 99504
+	Involuntary context switches: 5059
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
