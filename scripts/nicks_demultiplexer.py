@@ -18,6 +18,7 @@ def get_args():
     parser.add_argument("-i1", "--index1", help="use to specify the forward index file name as a string", required=True, type = str)
     parser.add_argument("-i2", "--index2", help="use to specify reverse index file name as a string", required=True ,type = str)
     parser.add_argument("-r2", "--read2", help="use to specify the reverse read file name as a string", required=True, type = str)
+    parser.add_argument("-c", "--covcut", help="use to specify the coverage cutoff value", default=30, type=int)
     return parser.parse_args()
 
 args = get_args()               # calls get_args method from above assigns the arguments to args
@@ -25,9 +26,9 @@ FORWARD_READ = args.read1          # assigning forward read file name as string 
 FORWARD_INDEX = args.index1       # assigning forward index file name as string to global variable
 REVERSE_INDEX = args.index2       # assigning reverse index file name as string to global varible
 REVERSE_READ = args.read2          # assigning reverse read file name as string to global variable
+COVERAGE_CUTOFF = args.covcut       #assigning coverage cutoff value as int to global varibale (defaults to 30)
 
 
-COVERAGE_CUTOFF = 30
 ALL_INDEXES = [] # I use this to store the 24 indexes in from the file
 DUAL_COUNTS_DICT = {} # each index as the key and the value INTEGER value that holds that amount that each one of these indexes is seen in a dual matched
 HOPPED_COUNT = 0   # Initialize a counter variable to keep track of the number of index hopped records

@@ -12,6 +12,7 @@ Note: All files used with this program must be g-zipped (.gz)
 * -r2: The file path to the reverse biological read .fastq file
 * -i1: The file path to the forward index .fastq file
 * -i2: The file path to the reverse index .fastq file
+* -c: The value you would like to set as the coverage cutoff value when throwing out low quality reads
 
 #### Required packages:
 * gzip
