@@ -11,6 +11,7 @@
 import gzip
 import argparse
 import os
+import sys
 
 if not os.path.exists('../demultiplexed_output'):
     os.mkdir('../demultiplexed_output')
@@ -150,12 +151,44 @@ with gzip.open(FORWARD_READ,'rt') as R1, gzip.open(FORWARD_INDEX,'rt') as R2, gz
             break
 
         # After we have access to the current record in each file, we then want to test for each of the four possibilities before we can determine if it is dual matched
+        # 0. Check for number of mismatches to see if we can error correct
         # 1. if either of the indexes have Ns, put the whole record in the respective undetermined files
         # 2. if the phred score of any of the index bases is below the coverage cutoff, put the whole record in the respective undetermined files
         # 3. if the forward index or the reverse-compliment of the reverse index do not match the 24 given indexes, put the whole record in the respective undetermined files
         # 4. if both are valid indexes, but are not the reverse compliment of eachother, then the whole record is put in the respective index hopped files
         
         unreversed_uncomplimented = reverse_compliment(R3_RECORD[1])
+        current_index = R2_RECORD[1]
+
+        if(unreversed_uncomplimented in ALL_INDEXES and current_index in ALL_INDEXES):
+            pass
+        else:
+            Index1_mismatches = []
+            Index2_mismatches = []
+            for i in range(len(ALL_INDEXES)):
+                current_all = ALL_INDEXES[i]
+                current_mismatches = 0
+                for j in range(len(current_index)): 
+                    if(current_all[j] != current_index[j]):
+                        current_mismatches += 1
+                Index1_mismatches.append(current_mismatches)
+
+                current_mismatches = 0
+                for j in range(len(unreversed_uncomplimented)): 
+                    if(current_all[j] != unreversed_uncomplimented[j]):
+                        current_mismatches += 1
+                Index2_mismatches.append(current_mismatches)
+
+
+            if(1 in Index1_mismatches):
+                index1_num_to_correct_to = Index1_mismatches.index(1)
+                R2_RECORD[1] = ALL_INDEXES[index1_num_to_correct_to]
+            
+            if(1 in Index2_mismatches):
+                index2_num_to_correct_to = Index2_mismatches.index(1)
+                unreversed_uncomplimented = ALL_INDEXES[index2_num_to_correct_to]
+                R3_RECORD[1] = reverse_compliment(ALL_INDEXES[index2_num_to_correct_to])
+
 
         # check 1 and 3:
         if(check_index(R2_RECORD[1]) != True or check_index(unreversed_uncomplimented) != True):
@@ -245,7 +278,7 @@ with gzip.open(FORWARD_READ,'rt') as R1, gzip.open(FORWARD_INDEX,'rt') as R2, gz
             INDEX_DICT_FW[R2_RECORD[1]].write(R1_RECORD[1] + '\n')
             INDEX_DICT_FW[R2_RECORD[1]].write(R1_RECORD[2] + '\n')
             INDEX_DICT_FW[R2_RECORD[1]].write(R1_RECORD[3] + '\n') 
-            # The reverse sequence record will be appended to the ual matched file that goes with this index (ex. indx1_R2.fastq) with the header modified to contain both indices
+            # The reverse sequence record will be appended to the dual matched file that goes with this index (ex. indx1_R2.fastq) with the header modified to contain both indices
             INDEX_DICT_RV[R2_RECORD[1]].write(R4_RECORD[0] + ' index:' + R3_RECORD[1] + ' RC:' + R2_RECORD[1] + '\n')
             INDEX_DICT_RV[R2_RECORD[1]].write(R4_RECORD[1] + '\n')
             INDEX_DICT_RV[R2_RECORD[1]].write(R4_RECORD[2] + '\n')
